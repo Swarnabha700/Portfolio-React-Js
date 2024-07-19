@@ -1,0 +1,100 @@
+@import "../../app.scss";
+
+.Contact {
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include mobile{
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include mobile{
+            gap: 20px;
+            text-align: center;
+            align-items: center;
+            margin-top: 70px;
+            max-height: 250px;
+        }
+
+        h1 {
+            font-size: 60px;
+            line-height: 50px;
+
+            @include mobile{
+                font-size: 30px;
+                
+            }
+        }
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    .formContainer {
+        flex: 1;
+        position: relative;
+
+        @include mobile{
+            padding: 15px;
+            width: 100%;
+        }
+
+        .phoneSVG{
+            position: absolute;
+            margin: auto;
+            stroke: orange;
+            z-index: -1;
+            @include mobile{
+                right: 3px;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            @include mobile{
+                transition-delay: none !important;
+            }
+
+            input, textarea {
+                padding: 15px;
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                border-radius: 5px;
+
+                @include mobile{
+                    padding: 7px 10px;
+                }
+            }
+
+            button{
+                padding: 10px;
+                border: none;
+                font-weight: bold;
+                border-radius: 10px;
+                background-color: orange;
+                cursor: pointer;
+
+                @include mobile{
+                    padding: 7px;
+                }
+            }
+        }
+    }
+}

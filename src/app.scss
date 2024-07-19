@@ -1,0 +1,70 @@
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM sans", sans-serif;
+}
+
+body{
+    background-color: #0c0c1d;
+    color: lightgray;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@mixin mobile{
+    @media (max-width:450px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width:768px) {
+        @content;
+    }
+}
+@mixin desktop{
+    @media (max-width:1366px) {
+        @content;
+    }
+}
+
+/* Style for webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1c1c1c; /* Dark background */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #f1c40f; /* Yellow color */
+    border-radius: 10px;
+    border: 3px solid #1c1c1c; /* Dark border */
+  }
+  
+  /* Style for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #f1c40f #1c1c1c;
+  }
+  
+  /* Optional: hover effect */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #d4ac0d; /* Slightly darker yellow on hover */
+  }  
